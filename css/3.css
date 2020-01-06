@@ -1,0 +1,110 @@
+
+.gg
+{
+	margin-top:118px;
+	display: flex;
+	justify-content: center;
+}
+.gg a
+{
+	
+	border:2px solid red;
+	transform: skewX(-20deg);
+	background-color:black;
+	position:fixed;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	
+}
+.gg a:hover
+{
+	background: linear-gradient(to right,#BB45F5,#1B5BBF,#BB45F5);
+	color: black;
+}
+
+#toggle
+{
+	display: none;
+}
+.togglearea
+{
+	display: none;
+}
+@media screen and (max-width: 800px)
+{
+	.gg
+	{
+		flex-direction: column;
+		display: none;
+	}
+	#toggle:checked + .navbar
+	{
+		display: flex;
+	}
+	.togglearea
+	{	
+		display: flex;
+	}
+}
+
+ 
+
+
+.gg a
+{
+	position: relative;
+	padding: 11px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 26px;
+	font-family: 'Oswald';
+	color: white;
+	margin:1.5px;
+	z-index: 1;
+}
+.gg a:hover{
+	color:black;
+	font-size: 28px;
+}
+.gg a::after
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-top: 2px solid gold;
+	border-bottom: 2px solid gold;
+	transform: scaleY(2);
+	opacity: 0;
+	transition: all 0.5s;
+	box-sizing: border-box;
+}
+.gg a:hover::after
+{
+	
+	transform: scaleY(1.2);
+	opacity: 1;
+}
+.gg a::before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to right,#BB45F5,#1B5BBF,#BB45F5);
+	transform: scale(0);
+	transition: all 0.9s;
+	z-index: -1;
+	
+	
+}
+.gg a:hover::before
+{
+	transform: scale(0.9);
+}

@@ -1,0 +1,21 @@
+.pic{
+		cursor:pionter;
+		margin-left:120px;
+		margin-bottom:200px;
+        width:160px;
+		height:160px;
+		border-radius:50%;
+		}
+.picbig{
+	cursor:pionter;
+	border-radius:50%;
+	margin-right:5px;
+     position:absolute;
+	 width:0px;
+	 -webkit-transition:width 0.3s linear 0s;
+	 transition:width 0.3s linear 0s;
+	 z-index:10;
+	 }
+	 .pic:hover + .picbig{
+	 width:160px;
+	 height:160px;}

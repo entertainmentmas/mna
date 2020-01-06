@@ -1,0 +1,152 @@
+*
+{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+.navbar
+{
+	background-color: black;
+	display: flex;
+	justify-content: center;
+}
+.navbar a
+{
+	position:fixed;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	text-transform: uppercase;
+	
+}
+.navbar a:hover
+{
+	background: linear-gradient(to right,#BB45F5,#1B5BBF,#BB45F5);
+	color: black;
+}
+.content p
+{
+	text-align: justify;
+}
+#toggle
+{
+	display: none;
+}
+.togglearea
+{
+	background-color: #6D6A6A;
+	border-bottom: 2px solid white;
+	color: white;
+	padding: 5px;
+	display: flex;
+	justify-content: flex-end;
+}
+.togglearea label
+{
+	background-color: white;
+	height: 45px;
+	width: 50px;
+	color: black;
+	border-radius: 6px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.togglearea label span
+{
+	background-color: black;
+	height: 4px;
+	width: 70%;
+	margin: 2px 0px;
+}
+.togglearea
+{
+	display: none;
+}
+@media screen and (max-width: 800px)
+{
+	.navbar
+	{
+		flex-direction: column;
+		display: none;
+	}
+	#toggle:checked + .navbar
+	{
+		display: flex;
+	}
+	.togglearea
+	{	
+		display: flex;
+	}
+}
+
+.mas{
+	background-color:red;
+	height: 5px;
+}
+
+
+
+
+.navbar a
+{
+	position: relative;
+	padding: 10px 19px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-family: 'Oswald';
+	color: white;
+	margin:5px;
+	z-index: 1;
+}
+.navbar a:hover{
+	color:black;
+	font-size: 19.5px;
+}
+.navbar a::after
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-top: 2px solid gold;
+	border-bottom: 2px solid gold;
+	transform: scaleY(2);
+	opacity: 0;
+	transition: all 0.5s;
+	box-sizing: border-box;
+}
+
+
+
+
+
+.navbar a:hover::after
+{
+	
+	transform: scaleY(1.2);
+	opacity: 1;
+}
+.navbar a::before
+{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(to right,#BB45F5,#1B5BBF,#BB45F5);
+	transform: scale(0);
+	transition: all 0.9s;
+	z-index: -1;
+	
+}
+.navbar a:hover::before
+{
+	transform: scale(0.9);
+}

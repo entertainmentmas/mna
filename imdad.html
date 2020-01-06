@@ -1,0 +1,145 @@
+<base href="https://www.bnbaccessories.com/" />
+<script src="//code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<div class="image"><a class="thumbnail" href=".jpg" title="Muddassir"><img id="zoom" src="https://www.bnbaccessories.com/image/cache/catalog/Deals/Banner%201080X1080%20Men%20Jacket%20228-bnbaccessoriescom-488x610.jpg" data-zoom-image="https://www.bnbaccessories.com/image/cache/catalog/Deals/Banner%201080X1080%20Men%20Jacket%20228-bnbaccessoriescom-800x1000.jpg" title="muddassir" alt="muddassir" /></a></div>
+<script type="text/javascript"><!--
+$('#review').delegate('.pagination a', 'click', function(e) {
+  e.preventDefault();
+
+    $('#review').fadeOut('slow');
+
+    $('#review').load(this.href);
+
+    $('#review').fadeIn('slow');
+});
+
+$('#review').load('index.php?route=product/product/review&product_id=1687');
+
+$('#button-review').on('click', function() {
+  $.ajax({
+    url: 'index.php?route=product/product/write&product_id=1687',
+    type: 'post',
+    dataType: 'json',
+    data: $("#form-review").serialize(),
+    beforeSend: function() {
+      $('#button-review').button('loading');
+    },
+    complete: function() {
+      $('#button-review').button('reset');
+    },
+    success: function(json) {
+      $('.alert-success, .alert-danger').remove();
+
+      if (json['error']) {
+        $('#review').after('<div class="alert alert-danger"><i class="fa fa-exclamation-circle"></i> ' + json['error'] + '</div>');
+      }
+
+      if (json['success']) {
+        $('#review').after('<div class="alert alert-success"><i class="fa fa-check-circle"></i> ' + json['success'] + '</div>');
+
+        $('input[name=\'name\']').val('');
+        $('textarea[name=\'text\']').val('');
+        $('input[name=\'rating\']:checked').prop('checked', false);
+      }
+    }
+  });
+});
+
+$(document).ready(function() {
+if ($(window).width() > 767) {
+    $("#zoom").elevateZoom({
+
+        gallery:'product-additional-block',
+        //inner zoom
+
+        zoomType : "window",
+        cursor: "crosshair"
+
+
+
+
+      });
+    var z_index = 0;
+
+                   $(document).on('click', '.thumbnail', function () {
+                     $('.thumbnails').magnificPopup('open', z_index);
+                     return false;
+                   });
+
+                   $('.product-additional-block a').click(function() {
+                     var smallImage = $(this).attr('data-image');
+                     var largeImage = $(this).attr('data-zoom-image');
+                     var ez =   $('#zoom').data('elevateZoom');
+                     $('.thumbnail').attr('href', largeImage);
+                     ez.swaptheimage(smallImage, largeImage);
+                     z_index = $(this).index('.product-additional-block a');
+                     return false;
+                   });
+
+  }else{
+    $(document).on('click', '.thumbnail', function () {
+    $('.thumbnails').magnificPopup('open', 0);
+    return false;
+    });
+  }
+});
+$(document).ready(function() {
+  $('.thumbnails').magnificPopup({
+    delegate: 'a.elevatezoom-gallery',
+    type: 'image',
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'mfp-with-zoom',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+      titleSrc: function(item) {
+        return item.el.attr('title');
+      }
+    }
+  });
+
+  $('.image-additional').owlCarousel({
+
+    items: 4,
+
+    navigation: true,
+
+    pagination: false,
+
+    itemsDesktop : [1199, 3],
+
+    itemsDesktopSmall : [991, 3],
+
+    itemsTablet : [767, 3],
+
+    itemsTabletSmall : [479, 2],
+
+    itemsMobile : [320, 1]
+
+  });
+
+$('.product-carousel').owlCarousel({
+    items: 6,
+    autoPlay: false,
+    singleItem: false,
+    navigation: true,
+    pagination: false,
+    itemsDesktop : [1199,3],
+    itemsDesktopSmall :  [991,3],
+    itemsTablet : [650,2],
+    itemsMobile : [479,1]
+  });
+
+});
+
+
+
+//--></script>
+<script type="text/javascript" src="catalog/view/javascript/jquery.elevatezoom.min.js"></script>
+
+
+
+

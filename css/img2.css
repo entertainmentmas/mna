@@ -1,0 +1,61 @@
+
+.contain
+{
+	margin-left:880px;
+	margin-top:-300px;
+	justify-content:center;
+	align-items:center;
+}
+.mainb{
+	border:2px solid blue;
+	width:216px;
+	height:302px;
+	position:relative;
+	perspective:1000px;
+	background-color:#930C0C;
+}
+.flipb
+{
+	position:relative;
+	height:100%;
+	width:100%;
+	background:#0CA2DA;
+	transition:all 1s;
+	transform-style:preserve-3d;
+}
+.mainb:hover .flipb
+{
+	transform:rotateX(180deg);
+}
+.fro, .ba
+{
+	height:100%;
+	width:100%;
+	color:white;
+	
+	backface-visibility: hidden;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.fro img
+{
+	height:100%;
+	width:100%;
+}
+.ba
+{
+	transform:rotateX(180deg);
+	
+	
+}
+.ba h3
+{
+	text-align:center;
+	font-size:26px;
+}
+.ba p
+{
+	text-align:justify;
+	padding:10px;
+}

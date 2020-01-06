@@ -1,0 +1,61 @@
+
+.containe
+{
+	margin-left:540px;
+	margin-top:-300px;
+	justify-content:center;
+	align-items:center;
+}
+.mainbo{
+	border:2px solid blue;
+	width:216px;
+	height:302px;
+	position:relative;
+	perspective:1000px;
+	background-color:#930C0C;
+}
+.flipbo
+{
+	position:relative;
+	height:100%;
+	width:100%;
+	background:#0CA2DA;
+	transition:all 1s;
+	transform-style:preserve-3d;
+}
+.mainbo:hover .flipbo
+{
+	transform:rotateY(180deg);
+}
+.fron, .bac
+{
+	height:100%;
+	width:100%;
+	color:white;
+	
+	backface-visibility: hidden;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.fron img
+{
+	height:100%;
+	width:100%;
+}
+.bac
+{
+	transform:rotateY(180deg);
+	
+	
+}
+.bac h3
+{
+	text-align:center;
+	font-size:26px;
+}
+.bac p
+{
+	text-align:justify;
+	padding:10px;
+}

@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>About Us</title>
+<link href="../css/style.css" rel="stylesheet"  type="text/css"/> 
+
+
+
+<script
+src="http://maps.googleapis.com/maps/api/js">
+</script>
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(24.9273208  , 67.0330662),
+    zoom:15,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("maps"), mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+
+
+
+
+	<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+#maps
+{ background-color:#666;
+width:70%;
+height:620px;
+float:left;
+}
+#forms
+{background-color:#093;
+width:30%;
+height:620px;
+float:left;
+color:#fff;
+}
+
+form
+{
+
+width: 100%;
+height:100%;
+background-color:rgb(2,173,193);
+font-style:italic;
+font-weight:bold;
+
+
+}
+TD{
+ padding:20PX;}
+ </style>
+
+
+</head>
+
+<body>
+<input type="checkbox" id="toggle">
+	<div class="navbar">
+	<img src="image/MAS.gif"width="200" height="54">
+		<a href="index.html">Home</a>
+		<a href="admin.html">Admine</a>
+		<a href="video.html">VIDEO</a>
+		<a href="https://www.facebook.com/MNA143Love/?ref=bookmarks">CHANAL</a>
+		<a href="address.html">ADDRESS</a>
+		<a href="book.html">Course</a>
+		<a href="https://clipmega.com/">DOWNLOAD</a>
+		<a href="boot/login.html">Login</a>
+	</div>
+	<div class="mas"></div>
+
+<div id="warpper"> 
+
+<header>
+
+<div style="width:100%;height:200px;float:right">
+<p align="center">
+<img src="image/23.jpg" style="width:1430px;height:190px;">
+
+
+</p>
+ </div> 
+
+</div>
+
+
+ </header>
+
+<nav> 
+<ul> 
+
+
+</ul>
+
+
+</nav>
+
+
+
+<section style="min-height:500px;background-color:red">
+
+<div id="forms">
+
+
+<form>
+<br>
+<br>
+
+<table>
+
+<tr> 
+<td> User Name: </td>
+
+<td>
+<input type="text" size="15"  required="required" maxlength="10"/>
+
+ </td>
+ </tr>
+
+<tr> 
+<td> Password: </td>
+<td> <input type="password" size="15"  required="required"/>  </td>
+ </tr>
+
+
+<tr> 
+<td> Gender: </td>
+<td>
+<input type="radio"value="male" name="gender"/>Male <input type="radio" value="Female" name="gender"/>Female
+ </td>
+
+ </tr>
+
+
+<tr>
+
+<td>Education </td>
+<td>
+<input type="checkbox"  name="EDU" value="SSC"/>SSC
+<input type="checkbox"  name="EDU" value="HSC"/>HSC
+<input type="checkbox"  name="EDU" value="GRADUATION"/>GRAD
+   </td>
+
+</tr>
+
+
+
+
+<TR>
+
+<TD> City: </TD>
+<TD>
+<select>
+<option value="khi">Karachi</option>
+<option value="lhr">Lahore</option>
+<option value="isb">Islamabad</option>
+<option value="MUL">Multan </option>
+
+</select>
+
+</TD>
+
+</TR>
+
+<tr>
+
+<td>Upload Resume: </td>
+<td> <input type="file"/>  </td>
+
+</tr>
+
+
+<tr>
+
+<td> </td>
+<td><button> Submit!</button> </td>
+
+</tr>
+
+
+</table>
+
+
+
+</form>
+
+
+
+
+ </div>
+
+<div id="maps">
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3408.726926574979!2d74.23515691510343!3d31.311291764569166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919ab3c3ea937e5%3A0xa41c556416a55771!2sRavi-Tech+Manufacturing+(Pvt.)+Limited.!5e0!3m2!1sen!2s!4v1565254888935!5m2!1sen!2s" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+
+
+
+ </div>
+
+
+
+ </section>
+
+
+<footer> 
+<br>
+
+
+<p style="text-align:center; ">Made by :Muhammad Muddassir </p>
+</footer>
+
+
+
+
+</div>
+
+
+</body>
+</html>
